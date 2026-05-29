@@ -204,18 +204,19 @@
     <section id="contacto" class="container" style="background-color: #f1f5f9;">
         <h2 style="text-align: center; margin-bottom: 2rem;">Contactanos</h2>
         <div class="contacto">
-            <form action="#" method="POST" onsubmit="alert('¡Mensaje enviado con éxito!'); return false;">
+            <!-- REEMPLAZÁ "TU_CODIGO" POR EL ID QUE TE DA FORMSPREE AL CREAR EL FORMULARIO -->
+            <form action="https://formspree.io" method="POST">
                 <div class="form-group">
                     <label for="nombre">Nombre Completo</label>
-                    <input type="text" id="nombre" required placeholder="Tu nombre">
+                    <input type="text" name="nombre" id="nombre" required placeholder="Tu nombre">
                 </div>
                 <div class="form-group">
                     <label for="correo">Correo Electrónico</label>
-                    <input type="email" id="correo" required placeholder="gotteluc@sadesa.com">
+                    <input type="email" name="_replyto" id="correo" required placeholder="gotteluc@sadesa.com">
                 </div>
                 <div class="form-group">
                     <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" rows="4" required placeholder="¿En qué te podemos ayudar?"></textarea>
+                    <textarea name="mensaje" id="mensaje" rows="4" required placeholder="¿En qué te podemos ayudar?"></textarea>
                 </div>
                 <button type="submit" class="btn-submit">Enviar Mensaje</button>
             </form>
