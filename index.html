@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Web Profesional</title>
+    <style>
+        /* Estilos Generales */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #f4f7f6;
+        }
+
+        /* Barra de Navegación */
+        header {
+            background-color: #1e293b;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+        .menu a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .menu a:hover {
+            color: #38bdf8;
+        }
+
+        /* Sección Principal (Hero) */
+        .hero {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #38bdf8;
+            color: #0f172a;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #0ea5e9;
+        }
+
+        /* Contenedor de Secciones */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Sección de Servicios/Tarjetas */
+        .servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .tarjeta {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .tarjeta h3 {
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+        }
+
+        /* Sección de Contacto */
+        .contacto {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 3rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+        .btn-submit {
+            width: 100%;
+            background-color: #1e293b;
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn-submit:hover {
+            background-color: #0f172a;
+        }
+
+        /* Pie de Página */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <header>
+        <nav>
+            <div class="logo">MiEmpresa</div>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Inicio / Hero -->
+    <section id="inicio" class="hero">
+        <h1>Bienvenido a Tu Futuro Sitio Web</h1>
+        <p>Creamos soluciones digitales a medida para hacer crecer tu presencia en internet de forma profesional y rápida.</p>
+        <a href="#contacto" class="btn">Empezar Ahora</a>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="container">
+        <h2 style="text-align: center; margin-bottom: 1rem;">Nuestros Servicios</h2>
+        <div class="servicios">
+            <div class="tarjeta">
+                <h3>Diseño Web</h3>
+                <p>Sitios modernos, rápidos y adaptados a todos los dispositivos móviles.</p>
+            </div>
+            <div class="tarjeta">
+                <h3>Marketing Digital</h3>
+                <p>Estrategias personalizadas para aumentar tus ventas y visibilidad.</p>
+            </div>
+            <div class="tarjeta">
+                <h3>Soporte 24/7</h3>
+                <p>Asistencia técnica continua para que tu web nunca deje de funcionar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="container" style="background-color: #f1f5f9;">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Contactanos</h2>
+        <div class="contacto">
+            <form action="#" method="POST" onsubmit="alert('¡Mensaje enviado con éxito!'); return false;">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" required placeholder="Tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" required placeholder="tu@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" rows="4" required placeholder="¿En qué te podemos ayudar?"></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 MiEmpresa. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
