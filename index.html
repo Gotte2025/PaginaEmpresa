@@ -204,25 +204,21 @@
     <section id="contacto" class="container" style="background-color: #f1f5f9;">
         <h2 style="text-align: center; margin-bottom: 2rem;">Contactanos</h2>
         <div class="contacto">
-            <!-- Formulario activo enlazado a tu correo -->
-            <form action="https://formsubmit.co" method="POST">
-                <!-- Configuraciones para un envío limpio -->
-                <input type="hidden" name="_method" value="POST">
-                <input type="hidden" name="_captcha" value="true">
-
+            <!-- Formulario controlado por JavaScript -->
+            <form id="miFormulario">
                 <div class="form-group">
                     <label for="nombre">Nombre Completo</label>
-                    <input type="text" name="Nombre" id="nombre" required placeholder="Tu nombre">
+                    <input type="text" id="nombre" required placeholder="Tu nombre">
                 </div>
                 <div class="form-group">
                     <label for="correo">Correo Electrónico</label>
-                    <input type="email" name="Email" id="correo" required placeholder="gotteluc@sadesa.com">
+                    <input type="email" id="correo" required placeholder="gotteluc@sadesa.com">
                 </div>
                 <div class="form-group">
                     <label for="mensaje">Mensaje</label>
-                    <textarea name="Mensaje" id="mensaje" rows="4" required placeholder="¿En qué te podemos ayudar?"></textarea>
+                    <textarea id="mensaje" rows="4" required placeholder="¿En qué te podemos ayudar?"></textarea>
                 </div>
-                <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                <button type="submit" class="btn-submit" id="btnEnviar">Enviar Mensaje</button>
             </form>
         </div>
     </section>
@@ -232,5 +228,20 @@
         <p>&copy; 2026 MiEmpresa. Todos los derechos reservados.</p>
     </footer>
 
-</body>
-</html>
+    <!-- Lógica de envío inmune a errores de GitHub Pages -->
+    <script>
+        document.getElementById('miFormulario').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const btn = document.getElementById('btnEnviar');
+            btn.innerText = 'Enviando...';
+            btn.disabled = true;
+
+            const datos = {
+                Nombre: document.getElementById('nombre').value,
+                Email: document.getElementById('correo').value,
+                Mensaje: document.getElementById('mensaje').value
+            };
+
+            // Envío en segundo plano por AJAX/Fetch
+            fetch('
